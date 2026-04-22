@@ -11,6 +11,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 ## Integrantes
 
 Nathan Furchi Alvisi
+
 Pedro Henrique Franco Moreira Amaral
 ## Orientador
 
