@@ -9,6 +9,9 @@
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
+César Henrique Policarpo de Melo
+
+Diogo Nascimento Ruis
 
 Matheus Militão Santos
 
