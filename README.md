@@ -1,10 +1,10 @@
-# Hello Hub
+# HelloHub
 
-`CURSO`
+Ciência da Computação
 
-`DISCIPLINA`
+Engenharia de Software II
 
-`SEMESTRE`
+01/2026
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
