@@ -13,6 +13,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 Nathan Furchi Alvisi
 
 Pedro Henrique Franco Moreira Amaral
+
+Matheus Militão Santos
 ## Orientador
 
 Diego Roberto Gonçalves de Pontes
