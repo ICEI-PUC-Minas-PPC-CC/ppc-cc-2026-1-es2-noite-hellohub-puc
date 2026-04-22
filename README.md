@@ -15,6 +15,8 @@ Nathan Furchi Alvisi
 Pedro Henrique Franco Moreira Amaral
 
 Matheus Militão Santos
+
+Rafael de Souza Felisberto
 ## Orientador
 
 Diego Roberto Gonçalves de Pontes
