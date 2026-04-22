@@ -13,6 +13,8 @@ César Henrique Policarpo de Melo
 
 Diogo Nascimento Ruis
 
+Marcos Henrique Gollin Filho
+
 Matheus Militão Santos
 
 Nathan Furchi Alvisi
@@ -20,8 +22,6 @@ Nathan Furchi Alvisi
 Pedro Henrique Franco Moreira Amaral
 
 Rafael de Souza Felisberto
-
-Marcos Henrique Gollin Filho
 
 ## Orientador
 
