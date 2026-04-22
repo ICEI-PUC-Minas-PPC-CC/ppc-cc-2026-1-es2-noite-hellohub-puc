@@ -6,7 +6,9 @@ Engenharia de Software II
 
 01/2026
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O HelloHub é um projeto de aplicativo/web app no-code para criação de chatbots personalizados, pensado para pequenos empreendedores, criadores de conteúdo e outros usuários que precisam automatizar atendimento sem depender de programação. A proposta do sistema é resolver um problema muito comum: hoje criar chatbots costuma exigir conhecimento técnico, ferramentas complexas e custos altos, o que torna esse tipo de solução inacessível para quem só quer responder clientes com mais rapidez, ganhar tempo e melhorar sua presença digital. Por isso, o HelloHub foi definido como uma plataforma simples, intuitiva e acessível, que democratiza a automação de atendimento.
+
+O que está sendo desenvolvido é uma plataforma em que o usuário pode criar, personalizar e publicar seu próprio chatbot em minutos, usando recursos como construtor visual de fluxo, templates prontos, integração com site, WhatsApp e Instagram, captura de leads, FAQ e personalização da aparência. Na prática, a ideia do projeto é permitir que alguém como uma dona de e-commerce ou um criador de conteúdo automatize dúvidas frequentes, reduza trabalho manual, capture contatos e coloque o chatbot para funcionar nos principais canais digitais, tudo com foco em facilidade de uso e geração de valor rápida já desde o MVP.
 
 ## Integrantes
 César Henrique Policarpo de Melo
