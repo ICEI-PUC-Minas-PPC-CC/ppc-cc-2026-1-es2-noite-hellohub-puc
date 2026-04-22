@@ -10,11 +10,11 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
+Matheus Militão Santos
+
 Nathan Furchi Alvisi
 
 Pedro Henrique Franco Moreira Amaral
-
-Matheus Militão Santos
 
 Rafael de Souza Felisberto
 ## Orientador
