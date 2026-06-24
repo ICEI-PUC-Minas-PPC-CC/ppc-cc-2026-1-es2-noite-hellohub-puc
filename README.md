@@ -79,6 +79,7 @@ O repositório está organizado para separar documentação, atividades acadêmi
 | `Atividades/`   | Entregas incrementais, atividades avaliativas e documentos das sprints |
 | `src/`          | Código-fonte da aplicação                                              |
 | `presentation/` | Materiais de apresentação da solução                                   |
+| `prototipo/`    | Protótipo funcional simples para demonstração do MVP                   |
 
 ## Integrantes
 
@@ -105,6 +106,29 @@ Diego Roberto Gonçalves de Pontes
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
 No estágio atual, o projeto encontra-se em fase de definição, documentação, modelagem e estruturação arquitetural. As instruções completas de instalação, execução e uso serão adicionadas quando o código-fonte da aplicação estiver disponível.
+
+### Protótipo funcional do MVP
+
+Foi adicionado um protótipo simples e isolado para demonstrar o funcionamento principal do HelloHub, sem alterar a estrutura original do projeto e sem depender de backend, banco de dados ou instalação de dependências.
+
+O protótipo está disponível em:
+
+`prototipo/hellohub-mvp/index.html`
+
+Para executar, basta abrir o arquivo `index.html` no navegador.
+
+Esse MVP demonstrativo contempla:
+
+* login demonstrativo;
+* painel de chatbots;
+* criação de chatbot;
+* construtor visual com caixas arrastáveis;
+* conexões entre caixas;
+* edição de entradas e saídas do fluxo;
+* simulador de conversa;
+* publicação com link local;
+* tela de chat publicada;
+* aba de integrações demonstrativas para site, WhatsApp, Instagram e API/sistema interno.
 
 # Documentação
 
@@ -138,6 +162,8 @@ Essa pasta tem o objetivo de registrar a evolução do projeto durante a discipl
 <li><a href="Atividades/Sprint 1/"> Sprint 1</a></li>
 <li><a href="Atividades/Sprint 2/"> Sprint 2</a></li>
 <li><a href="Atividades/Sprint 3/"> Sprint 3 - Definição da Arquitetura do Sistema</a></li>
+<li><a href="Atividades/Sprint 4/"> Sprint 4 - Planejamento do MVP.md</a></li>
+<li><a href="prototipo/hellohub-mvp/README.md"> Sprint 5 - Protótipo funcional do MVP</a></li>
 </ol>
 
 ## Entregas por Sprint
@@ -152,6 +178,7 @@ Essa pasta tem o objetivo de registrar a evolução do projeto durante a discipl
 # Código
 
 <li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="prototipo/hellohub-mvp/README.md"> Protótipo funcional do MVP</a></li>
 
 # Apresentação
 
