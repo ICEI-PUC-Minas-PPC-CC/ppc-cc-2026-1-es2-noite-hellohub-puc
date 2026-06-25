@@ -179,6 +179,8 @@ Essa pasta tem o objetivo de registrar a evolução do projeto durante a discipl
 | Sprint 1                | Entendimento do problema e contexto    | Organização da ideia, público-alvo, problema e proposta de valor                     |
 | Sprint 2                | Modelagem de classes e relacionamentos | Definição das principais classes, entidades e relacionamentos do sistema             |
 | Sprint 3                | Definição da arquitetura do sistema    | Organização das camadas, responsabilidades, comunicação e justificativa arquitetural |
+| Sprint 4                | Organização, Integração e Planejamento do MVP | Planejamento técnico da implementação do sistema                              |
+| Sprint 5                | Implementação do MVP                   | Implementação minima do HelloHub                                                     |
 
 # Código
 
