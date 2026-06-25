@@ -305,6 +305,58 @@ function getIntegrationCount(bot) {
   return Object.values(bot.integrations || {}).filter((integration) => integration.enabled).length;
 }
 
+function validateFlow(bot) {
+  const errors = [];
+  const nodeIds = new Set(bot.nodes.map((node) => node.id));
+  const startNode = bot.nodes.find((node) => node.kind === "start");
+
+  if (!bot.nodes.length) {
+    errors.push("O fluxo precisa ter pelo menos uma caixa.");
+  }
+
+  if (!startNode) {
+    errors.push("O fluxo precisa ter uma caixa inicial.");
+  }
+
+  bot.connections.forEach((connection) => {
+    if (!nodeIds.has(connection.from)) {
+      errors.push(`A conexao "${connection.label}" possui origem inexistente.`);
+    }
+
+    if (!nodeIds.has(connection.to)) {
+      errors.push(`A conexao "${connection.label}" possui destino inexistente.`);
+    }
+
+    if (connection.from === connection.to) {
+      errors.push("Uma caixa nao pode ser conectada a ela mesma.");
+    }
+
+    if (!connection.label || !connection.label.trim()) {
+      errors.push("Toda conexao precisa ter um texto de botao.");
+    }
+  });
+
+  if (startNode && !getOutgoing(bot, startNode.id).length) {
+    errors.push("A caixa inicial precisa ter pelo menos uma saida.");
+  }
+
+  bot.nodes.forEach((node) => {
+    if (node.kind === "start") {
+      return;
+    }
+
+    const hasIncoming = bot.connections.some((connection) => connection.to === node.id);
+    if (!hasIncoming) {
+      errors.push(`A caixa "${node.title}" esta isolada, sem entrada.`);
+    }
+  });
+
+  return {
+    valid: errors.length === 0,
+    errors
+  };
+}
+
 function navigate(hash) {
   window.location.hash = hash;
 }
@@ -652,6 +704,7 @@ function renderFlowView(bot, selectedNode) {
           </div>
         </div>
         ${ui.connecting ? renderConnectHint(bot) : ""}
+        ${renderValidationSummary(bot)}
         <div class="canvas-shell" id="flowCanvas">
           ${renderConnectionLayer(bot)}
           ${bot.nodes.map((node) => renderCanvasNode(node)).join("")}
@@ -661,6 +714,23 @@ function renderFlowView(bot, selectedNode) {
       <aside class="card panel-pad simulator-panel">
         ${renderSimulator(bot)}
       </aside>
+    </div>
+  `;
+}
+
+function renderValidationSummary(bot) {
+  const validation = validateFlow(bot);
+  return `
+    <div class="validation-panel ${validation.valid ? "valid" : "invalid"}">
+      <strong>${validation.valid ? "Fluxo valido para publicacao" : "Pendencias antes de publicar"}</strong>
+      ${validation.valid ? `
+        <span>Entrada, processamento e saida do fluxo estao conectados.</span>
+      ` : `
+        <ul>
+          ${validation.errors.slice(0, 4).map((error) => `<li>${escapeHtml(error)}</li>`).join("")}
+          ${validation.errors.length > 4 ? `<li>Mais ${validation.errors.length - 4} pendencia(s).</li>` : ""}
+        </ul>
+      `}
     </div>
   `;
 }
@@ -947,6 +1017,15 @@ function wireCommonBuilderEvents(bot) {
         return;
       }
       saveSelectedNodeForm(bot, nodeForm);
+    }
+
+    const validation = validateFlow(bot);
+    if (!validation.valid) {
+      bot.status = "draft";
+      saveState();
+      alert(`Corrija o fluxo antes de publicar:\n- ${validation.errors.join("\n- ")}`);
+      renderBuilder(bot.id, getActiveBuilderTab());
+      return;
     }
 
     bot.status = "published";

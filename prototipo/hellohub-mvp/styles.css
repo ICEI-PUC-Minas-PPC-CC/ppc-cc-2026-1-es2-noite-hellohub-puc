@@ -498,6 +498,39 @@ button:disabled {
   font-size: 14px;
 }
 
+.validation-panel {
+  display: grid;
+  gap: 8px;
+  margin: 14px 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfb;
+  font-size: 14px;
+}
+
+.validation-panel.valid {
+  border-color: rgba(17, 98, 61, 0.28);
+  background: #eefaf4;
+  color: #11623d;
+}
+
+.validation-panel.invalid {
+  border-color: rgba(189, 59, 52, 0.35);
+  background: #fff1f0;
+  color: #7d211c;
+}
+
+.validation-panel strong,
+.validation-panel span {
+  display: block;
+}
+
+.validation-panel ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
 .canvas-shell {
   position: relative;
   width: 980px;

@@ -117,6 +117,10 @@ O protótipo está disponível em:
 
 Para executar, basta abrir o arquivo `index.html` no navegador.
 
+A descrição da entrega da Sprint 5, incluindo relação com arquitetura, modelagem e testes básicos, está em:
+
+`prototipo/hellohub-mvp/SPRINT5_ENTREGA.md`
+
 Esse MVP demonstrativo contempla:
 
 * login demonstrativo;
@@ -125,6 +129,7 @@ Esse MVP demonstrativo contempla:
 * construtor visual com caixas arrastáveis;
 * conexões entre caixas;
 * edição de entradas e saídas do fluxo;
+* validação básica do fluxo antes da publicação;
 * simulador de conversa;
 * publicação com link local;
 * tela de chat publicada;
